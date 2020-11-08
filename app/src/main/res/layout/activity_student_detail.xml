@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".student_detail"
+    android:orientation="vertical"
+
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textSize="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageResult"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/kid"
+            />
+
+        <TextView
+            android:id="@+id/detailName"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:text="0"
+            android:textSize="20dp"
+            android:textColor="#ffff299f"
+            android:paddingLeft="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:gravity="fill"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:text="Level"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/detailPlus"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:text="Plus"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/plusLevel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:text="0"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/DetailMinus"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Minus"
+            android:gravity="fill"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+        <EditText
+            android:id="@+id/minusLevel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:text="0"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/DetailMult"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Multiplication"
+            android:gravity="fill"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+        <EditText
+            android:id="@+id/multLevel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:text="0"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/DetailDivision"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Division"
+            android:gravity="fill"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+        <EditText
+            android:id="@+id/divisionLevel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="fill"
+            android:text="0"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/updateDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="updateLevel"
+
+        android:text="Update" />
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+
+
+
+</LinearLayout>
