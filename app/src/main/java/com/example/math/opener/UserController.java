@@ -57,12 +57,35 @@ public class UserController {
             String email = results.getString(emailIndex);
 
             user = new User(userId,name,email,isParent);
-
         }
         return user;
     }
     public static User getUserbyID(SQLiteDatabase db, int id){
         String sql = "select * from " + TABLE_USER + " where "+  COL_ID + " = " + id ;
+        User user = null;
+        Cursor results = db.rawQuery(sql,null);
+        if (results.getCount()>0){
+            results.moveToNext();
+            int useridIndex = results.getColumnIndex(COL_ID);
+            int nameIndex = results.getColumnIndex(COL_NAME);
+            int isParentIndex = results.getColumnIndex(COL_PARENT);
+            Log.e("SQL","isParent Index" +isParentIndex );
+            int emailIndex = results.getColumnIndex(COL_EMAIL);
+
+            int userId = results.getInt(useridIndex);
+            String name = results.getString(nameIndex);
+
+            Log.e("SQL","isParent result" +results.getInt(isParentIndex));
+            Boolean isParent = results.getInt(isParentIndex)>0;
+            String email = results.getString(emailIndex);
+
+            user = new User(userId,name,email,isParent);
+
+        }
+        return user;
+    }
+    public static User getParent(SQLiteDatabase db){
+        String sql = "select * from " + TABLE_USER + " where "+  COL_PARENT + " = 1" ;
         User user = null;
         Cursor results = db.rawQuery(sql,null);
         if (results.getCount()>0){

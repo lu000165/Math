@@ -124,6 +124,15 @@
             android:textColor = "#ffff25e6"/>
     </LinearLayout>
 
+    <Button
+        android:id="@+id/backToMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendEmail"
+        android:text="submit"
+        android:layout_marginLeft="10dp"
+         />
+
     <ImageView
         android:id="@+id/aplusImage"
         android:layout_width="381dp"
